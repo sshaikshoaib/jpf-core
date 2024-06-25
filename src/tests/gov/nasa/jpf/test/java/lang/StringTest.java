@@ -76,6 +76,14 @@ public class StringTest extends TestJPF {
 	}
 
 	@Test
+	public void testEqualsWithNonStringObject() {
+    	if (verifyNoPropertyViolation()) {
+        	String a = "one two";
+        	assert !a.equals(new Object());
+   		 }
+	}
+	
+	@Test
 	public void testIndexOf() {
 		if (verifyNoPropertyViolation()) {
 			String a = "bla.bla";
